@@ -12,79 +12,116 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'Text normal',
-                  style: TextStyle(
-                    fontSize: 30,
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Text normal',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Spacing',
-                  style: TextStyle(
-                    fontSize: 30,
-                    letterSpacing: 10,
+                  SizedBox(height: 25),
+                  Text(
+                    'Spacing',
+                    style: TextStyle(
+                      fontSize: 30,
+                      letterSpacing: 10,
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Word Spacing Example',
-                  style: TextStyle(
-                    fontSize: 30,
-                    wordSpacing: 15,
+                  SizedBox(height: 25),
+                  Text(
+                    'Word Spacing Example',
+                    style: TextStyle(
+                      fontSize: 30,
+                      wordSpacing: 15,
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Baris 1\nBaris 2\nBaris 3',
-                  style: TextStyle(
-                    fontSize: 30,
-                    height: 2,
+                  SizedBox(height: 25),
+                  Text(
+                    'Baris 1\nBaris 2\nBaris 3',
+                    style: TextStyle(
+                      fontSize: 30,
+                      height: 2,
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Garis Bawah',
-                  style: TextStyle(
-                    fontSize: 30,
-                    decoration: TextDecoration.underline,
+                  SizedBox(height: 25),
+                  Text(
+                    'Garis Bawah',
+                    style: TextStyle(
+                      fontSize: 30,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Garis Tengah',
-                  style: TextStyle(
-                    fontSize: 30,
-                    decoration: TextDecoration.lineThrough,
+                  SizedBox(height: 25),
+                  Text(
+                    'Garis Tengah',
+                    style: TextStyle(
+                      fontSize: 30,
+                      decoration: TextDecoration.lineThrough,
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Background',
-                  style: TextStyle(
-                    fontSize: 30,
-                    backgroundColor: Color.fromARGB(255, 144, 59, 255),
+                  SizedBox(height: 25),
+                  Text(
+                    'Background',
+                    style: TextStyle(
+                      fontSize: 30,
+                      backgroundColor: Color.fromARGB(255, 144, 59, 255),
+                    ),
                   ),
-                ),
-                SizedBox(height: 25),
-                Text(
-                  'Text Bayangan',
-                  style: TextStyle(
-                    fontSize: 30,
-                    shadows: [
-                      Shadow(
-                        offset: Offset(5, 5),
-                        blurRadius: 10,
-                      ),
-                    ],
+                  SizedBox(height: 25),
+                  Text(
+                    'Text Bayangan',
+                    style: TextStyle(
+                      fontSize: 30,
+                      shadows: [
+                        Shadow(
+                          offset: Offset(5, 5),
+                          blurRadius: 10,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(height: 25),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                    ),
+                    child: Column(
+                      // Memaksa seluruh anak Column melebar penuh agar textAlign berfungsi
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(
+                          'Left',
+                          textAlign: TextAlign.left,
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Center',
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Right',
+                          textAlign: TextAlign.right,
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Justify: Flutter adalah framework '
+                          'untuk membuat aplikasi menggunakan '
+                          'satu codebase.',
+                          textAlign: TextAlign.justify,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -92,4 +129,3 @@ class MyWidget extends StatelessWidget {
     );
   }
 }
-
