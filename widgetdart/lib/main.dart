@@ -47,6 +47,43 @@ class MyWidget extends StatelessWidget {
                     height: 2,
                   ),
                 ),
+                SizedBox(height: 25),
+                Text(
+                  'Garis Bawah',
+                  style: TextStyle(
+                    fontSize: 30,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                SizedBox(height: 25),
+                Text(
+                  'Garis Tengah',
+                  style: TextStyle(
+                    fontSize: 30,
+                    decoration: TextDecoration.lineThrough,
+                  ),
+                ),
+                SizedBox(height: 25),
+                Text(
+                  'Background',
+                  style: TextStyle(
+                    fontSize: 30,
+                    backgroundColor: Color.fromARGB(255, 144, 59, 255),
+                  ),
+                ),
+                SizedBox(height: 25),
+                Text(
+                  'Text Bayangan',
+                  style: TextStyle(
+                    fontSize: 30,
+                    shadows: [
+                      Shadow(
+                        offset: Offset(5, 5),
+                        blurRadius: 10,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -55,3 +92,4 @@ class MyWidget extends StatelessWidget {
     );
   }
 }
+
