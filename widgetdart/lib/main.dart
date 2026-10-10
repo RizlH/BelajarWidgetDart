@@ -120,6 +120,20 @@ class MyWidget extends StatelessWidget {
                       ],
                     ),
                   ),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                    ),
+                    child: const Text(
+                      'Konsep fuzzy logic (logika samar) '
+                      'pertama kali diperkenalkan secara resmi pada tahun 1965'
+                      'oleh Lotfi A. Zadeh, seorang profesor ilmu komputer dari University of California, Berkeley.',
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
                 ],
               ),
             ),
