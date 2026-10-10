@@ -134,6 +134,36 @@ class MyWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
+                  RichText(
+                    text: TextSpan(
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Saya sedang belajar ',
+                        ),
+                        TextSpan(
+                          text: 'Flutter',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromARGB(255, 100, 33, 243),
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' dan ',
+                        ),
+                        TextSpan(
+                          text: 'Dart',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromARGB(255, 207, 234, 98),
+                          ),
+                        ),
+                      ],
+                    ), 
+                  ),
                 ],
               ),
             ),
