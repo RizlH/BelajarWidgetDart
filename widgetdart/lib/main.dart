@@ -164,6 +164,25 @@ class MyWidget extends StatelessWidget {
                       ],
                     ), 
                   ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Text normal',
+                        style: TextStyle(
+                          fontSize: 40,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Text dengan ukuran lebih besar',
+                        textScaler: TextScaler.linear(1.5),
+                        style: TextStyle(
+                          fontSize: 60,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
