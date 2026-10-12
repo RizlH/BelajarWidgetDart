@@ -1,17 +1,26 @@
-# widgetdart
+# Laporan Pembelajaran Flutter: Text Styling & Formatting
 
-A new Flutter project.
+Dokumen ini berisi rangkuman dan dokumentasi hasil latihan mandiri mengenai implementasi berbagai properti **Styling Text**, **Pengaturan Tata Letak**, **Rich Text**, hingga pemanfaatan **Custom Reusable Widget** di Flutter.
 
-## Getting Started
+## Topik Pembelajaran
 
-This project is a starting point for a Flutter application.
+1. **Basic Text Styling & Spacing**
+   * Mengatur ukuran font (`fontSize`).
+   * Mengatur jarak antar huruf (`letterSpacing`) dan antar kata (`wordSpacing`).
+   * Mengatur tinggi baris teks (`height`).
 
-A few resources to get you started if this is your first Flutter project:
+2. **Text Decoration & Effects**
+   * Menerapkan dekorasi garis seperti *Underline* (`TextDecoration.underline`) dan *Strikethrough/Line Through* (`TextDecoration.lineThrough`).
+   * Menerapkan warna latar belakang teks (`backgroundColor`).
+   * Memberikan efek bayangan pada teks menggunakan `Shadow` (`offset`, `blurRadius`).
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+3. **Alignment & Overflow Handling**
+   * Mengatur perataan teks (`textAlign`: *left*, *center*, *right*, *justify*).
+   * Membatasi jumlah baris teks (`maxLines`) dan memberikan pemotongan otomatis dengan titik-titik (`overflow: TextOverflow.ellipsis`).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. **Rich Text & Text Scaling**
+   * Menggabungkan beberapa format gaya teks berbeda dalam satu paragraf menggunakan `RichText` dan `TextSpan`.
+   * Mengubah skala ukuran teks secara eksplisit dengan `textScaler`.
+
+5. **Reusable Custom Widget**
+   * Memisahkan komponen UI menjadi *Widget Stateless* tersendiri (`SectionTitle`) untuk mempermudah pembuatan judul bagian secara konsisten tanpa pengulangan kode (*DRY Principle*).
