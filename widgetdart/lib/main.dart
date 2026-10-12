@@ -18,35 +18,25 @@ class MyWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Text normal',
-                    style: TextStyle(
-                      fontSize: 30,
-                    ),
-                  ),
+                  // Contoh penggunaan SectionTitle di paling atas atau di sela-sela widget:
+                  SectionTitle(title: 'Demo Styling Text'),
+                  SizedBox(height: 15),
+
+                  Text('Text normal', style: TextStyle(fontSize: 30)),
                   SizedBox(height: 25),
                   Text(
                     'Spacing',
-                    style: TextStyle(
-                      fontSize: 30,
-                      letterSpacing: 10,
-                    ),
+                    style: TextStyle(fontSize: 30, letterSpacing: 10),
                   ),
                   SizedBox(height: 25),
                   Text(
                     'Word Spacing Example',
-                    style: TextStyle(
-                      fontSize: 30,
-                      wordSpacing: 15,
-                    ),
+                    style: TextStyle(fontSize: 30, wordSpacing: 15),
                   ),
                   SizedBox(height: 25),
                   Text(
                     'Baris 1\nBaris 2\nBaris 3',
-                    style: TextStyle(
-                      fontSize: 30,
-                      height: 2,
-                    ),
+                    style: TextStyle(fontSize: 30, height: 2),
                   ),
                   SizedBox(height: 25),
                   Text(
@@ -77,39 +67,23 @@ class MyWidget extends StatelessWidget {
                     'Text Bayangan',
                     style: TextStyle(
                       fontSize: 30,
-                      shadows: [
-                        Shadow(
-                          offset: Offset(5, 5),
-                          blurRadius: 10,
-                        ),
-                      ],
+                      shadows: [Shadow(offset: Offset(5, 5), blurRadius: 10)],
                     ),
                   ),
                   SizedBox(height: 25),
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      border: Border.all(),
-                    ),
+                    decoration: BoxDecoration(border: Border.all()),
                     child: Column(
                       // Memaksa seluruh anak Column melebar penuh agar textAlign berfungsi
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text(
-                          'Left',
-                          textAlign: TextAlign.left,
-                        ),
+                        Text('Left', textAlign: TextAlign.left),
                         SizedBox(height: 10),
-                        Text(
-                          'Center',
-                          textAlign: TextAlign.center,
-                        ),
+                        Text('Center', textAlign: TextAlign.center),
                         SizedBox(height: 10),
-                        Text(
-                          'Right',
-                          textAlign: TextAlign.right,
-                        ),
+                        Text('Right', textAlign: TextAlign.right),
                         SizedBox(height: 10),
                         Text(
                           'Justify: Flutter adalah framework '
@@ -120,12 +94,15 @@ class MyWidget extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: 25),
+
+                  SectionTitle(title: 'Demo Overflow & Rich Text'),
+                  SizedBox(height: 15),
+
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      border: Border.all(),
-                    ),
+                    decoration: BoxDecoration(border: Border.all()),
                     child: const Text(
                       'Konsep fuzzy logic (logika samar) '
                       'pertama kali diperkenalkan secara resmi pada tahun 1965'
@@ -134,16 +111,12 @@ class MyWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
+                  SizedBox(height: 25),
                   RichText(
                     text: TextSpan(
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                       children: [
-                        TextSpan(
-                          text: 'Saya sedang belajar ',
-                        ),
+                        TextSpan(text: 'Saya sedang belajar '),
                         TextSpan(
                           text: 'Flutter',
                           style: TextStyle(
@@ -151,9 +124,7 @@ class MyWidget extends StatelessWidget {
                             color: const Color.fromARGB(255, 100, 33, 243),
                           ),
                         ),
-                        TextSpan(
-                          text: ' dan ',
-                        ),
+                        TextSpan(text: ' dan '),
                         TextSpan(
                           text: 'Dart',
                           style: TextStyle(
@@ -162,24 +133,22 @@ class MyWidget extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ), 
+                    ),
                   ),
+                  SizedBox(height: 25),
+
+                  SectionTitle(title: 'Demo Text Scaling'),
+                  SizedBox(height: 15),
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Text normal',
-                        style: TextStyle(
-                          fontSize: 40,
-                        ),
-                      ),
+                      Text('Text normal', style: TextStyle(fontSize: 40)),
                       SizedBox(height: 20),
                       Text(
                         'Text dengan ukuran lebih besar',
                         textScaler: TextScaler.linear(1.5),
-                        style: TextStyle(
-                          fontSize: 60,
-                        ),
+                        style: TextStyle(fontSize: 60),
                       ),
                     ],
                   ),
@@ -189,6 +158,20 @@ class MyWidget extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class SectionTitle extends StatelessWidget {
+  final String title;
+
+  const SectionTitle({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
     );
   }
 }
